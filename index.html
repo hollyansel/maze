@@ -17,7 +17,7 @@
     <body>
         
       
-        <a-scene physics="debug: true">
+        <a-scene physics="debug: false">
             
             <a-assets>
                 
@@ -32,7 +32,7 @@
             
             <a-sky src="#background" color="white"></a-sky>
             <a-plane static-body material="src:#floor; repeat: 10 10" height="100" width="100" color="grey" rotation=" -90 0 0" position="0 0 0"></a-plane>
-            
+            <a-sphere id="goal" static-body color ="black" radius=".5" position="4.5 .5 -12"></a-sphere>
             <a-entity id="maze1">
                 
                 

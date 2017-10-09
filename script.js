@@ -2,7 +2,11 @@ $(document).ready(function(){
 
     var playerEl = document.getElementById("player");
     playerEl.addEventListener('collide', function (e) {
+        
         console.log('Player has collided with body #' + e.detail.body.id);
+        if(e.detail.body.id == 2){
+            alert("Winner");
+        }
 
       e.detail.target.el;  // Original entity (playerEl).
       e.detail.body.el;    // Other entity, which playerEl touched.
