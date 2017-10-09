@@ -1,0 +1,59 @@
+<html>
+    <head>
+        
+        <title>Maze</title>
+        <meta charset="utf-8">
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.min.js"></script>
+        
+        
+    </head>    
+    
+    
+    
+    <body>
+        
+      
+        <a-scene physics="debug: true">
+            
+            <a-assets>
+                
+                <a-box color="blue" id="wall-one" depth="1" width="4" height="3"></a-box>
+                <img src="marble1.png" id="background">
+                <img src="marble.jpg" id="marble">
+                <img src="floor.jpg" id="floor">
+            </a-assets>
+            
+            <!--<a-entity camera look-controls></a-entity>-->
+            <!--<a-entity id=camera position="1 0 2"><a-camera></a-camera></a-entity>-->
+            
+            <a-sky src="#background" color="white"></a-sky>
+            <a-plane static-body material="src:#floor; repeat: 10 10" height="100" width="100" color="grey" rotation=" -90 0 0" position="0 0 0"></a-plane>
+            
+            <a-entity id="maze1">
+                
+                
+            </a-entity> 
+               
+            <a-entity id="player"
+              camera
+                universal-controls
+              kinematic-body
+              position="1 4 2">
+            </a-entity>
+               
+              
+             
+ 
+            
+        </a-scene>
+      
+        
+    </body>
+    
+    
+    
+</html>
